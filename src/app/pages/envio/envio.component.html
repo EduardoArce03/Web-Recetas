@@ -1,0 +1,36 @@
+<section id="Login">
+    <div class="container">
+        <div class="informacion">
+            <div class="informacion-child">
+                <h1>Bienvenido </h1>
+                <p>Acercate mas hacia la cocina</p>
+            </div>
+        </div>
+            <div class="container-form">
+                <h3>Ingresa tu receta !</h3>               
+                <div class="container-form-child">
+                    <form [formGroup]="recetaForm" action="" name="Receta" id="form" (ngSubmit)="onSubmit()">
+                        <label for="Cedula">Cedula del emitente</label>
+                        <input type="text" id="cedula" name="cedula" [(ngModel)]="receta.id">
+
+                        <label for="nombreReceta">Nombre de la receta</label>
+                        <input type="text" id="nombreReceta" name="nombreReceta" [(ngModel)]="receta.nombre" />
+
+                        <label for="ingredientes">Ingredsientes</label>
+                        <input type="text" id="ingredientes" name="Ingredientes" [(ngModel)]="receta.ingredientes">
+
+                        <label for="pasos">Pasos</label>
+                        <input type="text" id="pasos" name="Pasos" [(ngModel)]="receta.pasos">
+
+
+
+                        <button (click)="saveReceta()" class="enviar">Enviar</button>
+                        <button (click)="goReceta()" class="mirar">Mirar Receta</button>
+                        <p class="err" id="err"></p>
+
+                    </form>
+                </div>
+            </div>
+        
+    </div>
+</section>       
